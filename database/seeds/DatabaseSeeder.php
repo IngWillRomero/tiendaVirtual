@@ -16,6 +16,11 @@ class DatabaseSeeder extends Seeder
 
         // $this->call(UserTableSeeder::class);
 
+        factory('App\User','admin', 3)->create();
+        factory('App\User','member', 10)->create();
+        factory('App\Category',5)->create();
+        factory('App\Article',20)->create();
+
         Model::reguard();
     }
 }
